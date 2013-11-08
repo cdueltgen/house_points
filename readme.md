@@ -1,0 +1,1 @@
+Uses google spreadsheet to calculate house points
