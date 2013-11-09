@@ -1,6 +1,5 @@
 import gspread
 import requests
-import csv
 
 gryffindor = 0
 ravenclaw = 0
