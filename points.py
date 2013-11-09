@@ -1,11 +1,11 @@
 import gspread
 import requests
 
-gryffindor = 0
-ravenclaw = 0
-hufflepuff = 0
-slytherin = 0
-da = 0
+points = { "Gryffindor": 0,
+        "Ravenclaw": 0,
+        "Hufflepuff": 0,
+        "Slytherin": 0,
+        "Dumbledore's Army": 0 }
 
 """
 Link for editing sheet:
@@ -30,19 +30,10 @@ for row in lines:
     row = row.split(',')
 
 # for row in all_points:
-    if row[1] == "Gryffindor":
-        gryffindor += int(row[2])
-    if row[1] == "Slytherin":
-        slytherin += int(row[2])
-    if row[1] == "Ravenclaw":
-        ravenclaw += int(row[2])
-    if row[1] == "Hufflepuff":
-        hufflepuff += int(row[2])
-    if row[1] == "Dumbledore's Army":
-        da += int(row[2])
+    points[row[1]] += int(row[2])
 
-print "Gryffindor: ", gryffindor
-print "Hufflepuff: ", hufflepuff
-print "Ravenclaw: ", ravenclaw
-print "Slytherin: ", slytherin
-print "Dumbledore's Army: ", da
+print "Gryffindor: ", points["Gryffindor"]
+print "Hufflepuff: ", points["Hufflepuff"]
+print "Ravenclaw: ", points["Ravenclaw"]
+print "Slytherin: ", points["Slytherin"]
+print "Dumbledore's Army: ", points["Dumbledore's Army"]
